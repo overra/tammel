@@ -1,0 +1,17 @@
+body { background: #19191f; padding: 0 32px; }
+pre, code { font-family: "Roboto Mono", monospace !important; }
+code[data-name] {
+  display: block;
+  position: relative;
+  margin: 16px auto;
+  width: 750px;
+}
+code[data-name]::after {
+  content: attr(data-name);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #aaaaca;
+  font-family: "Roboto Mono", monospace;
+}

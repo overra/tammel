@@ -1,0 +1,12 @@
+{
+  "name": "tammel",
+  "version": "1.0.0",
+  "repository": "git@github.com:overra/tammel.git",
+  "author": "Adam Snodgrass <overra@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "micro": "^9.3.3",
+    "uuid": "^3.3.2"
+  }
+}

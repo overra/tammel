@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "alias": ["tammel"],
+  "builds": [
+    {"src": "*.css", "use": "@now/static"},
+    {"src": "view.js", "use": "@now/node"},
+    { "src": "*.md", "use": "@now/md" }
+  ],
+  "routes": [
+    {"src": "/", "dest": "readme.html"},
+    {"src": "/(.+).css", "dest": "$1.css"},
+    {"src": "/(.+)", "dest": "view.js"}
+  ]
+}
