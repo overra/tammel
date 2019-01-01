@@ -10,13 +10,11 @@ const {
   template
 } = require('./utils')
 
-const GIST_API = 'https://api.github.com/gists/'
-
 module.exports = async (req, res) => {
   const id = getId(req)
   if (id === 'favicon.ico') return send(res, 404)
   try {
-    const result = await getJson(GIST_API + id)
+    const result = await getJson('https://api.github.com/gists/' + id)
     const languages = []
     const source = Object.entries(result.files)
       .reduce((source, [name, {content, language}]) => {
