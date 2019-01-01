@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": ["tammel"],
+  "alias": ["tammel", "tammel.xyz"],
   "builds": [
     {"src": "*.css", "use": "@now/static"},
     {"src": "view.js", "use": "@now/node"},
