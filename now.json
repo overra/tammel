@@ -4,11 +4,13 @@
   "builds": [
     {"src": "*.css", "use": "@now/static"},
     {"src": "view.js", "use": "@now/node"},
+    {"src": "capture.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } },
     { "src": "*.md", "use": "@now/md" }
   ],
   "routes": [
     {"src": "/", "dest": "readme.html"},
     {"src": "/(.+).css", "dest": "$1.css"},
+    {"src": "/c/(.+)", "dest": "capture.js"},
     {"src": "/(.+)", "dest": "view.js"}
   ]
 }

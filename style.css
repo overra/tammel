@@ -4,7 +4,15 @@ code[data-name] {
   display: block;
   position: relative;
   margin: 16px auto;
-  width: 750px;
+}
+code[data-name]::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  content: 'this invisible text has a total length of 80 characters and provides a guideline';
+  border-right: 1px #fff2 solid;
+  color: transparent;
 }
 code[data-name]::after {
   content: attr(data-name);
